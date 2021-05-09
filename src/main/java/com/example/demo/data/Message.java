@@ -2,6 +2,8 @@ package com.example.demo.data;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+
+import java.util.Date;
 import java.util.UUID;
 
 import javax.persistence.GeneratedValue;
@@ -35,4 +37,7 @@ public class Message {
 
     @Column("magic_number")
     private int magicNumber;
+    
+    @Column("createdAt")
+    private Date createdAt = new Date(); //localDate
 }
